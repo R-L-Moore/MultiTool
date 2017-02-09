@@ -17,7 +17,7 @@ double conversion(int i)
 {
 	std::cout << std::fixed;
 	std::cout << std::setprecision(2);
-	double result = i / 1000.0;
+	double result = i / 1024.0;
 	return result;
 }
 
@@ -122,7 +122,11 @@ int main()
 				std::cout << "\n Enter a value to convert : ";	  	  	  	  
 				std::cin >> kb;
 				
-				if (conversion(kb) >= 1000)	 	 
+				if (conversion(conversion(kb)) >= 1024)
+				{
+					std::cout << kb << "kb is equal to " << conversion(conversion(conversion(kb))) << "tb" << std::endl;
+				}
+				else if (conversion(kb) >= 1024)	  
 				{
 					std::cout << kb << "kb is equal to " << conversion(conversion(kb)) << "gb" << std::endl;
 				}
