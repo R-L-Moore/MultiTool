@@ -90,7 +90,7 @@ void offlineFiles()
 		if(decision == 'y' || decision == 'Y')
 		{
 			std::cout << "shutting down..." << std::endl;
-			//system("shutdown /R /t 10");
+			system("shutdown /R /t 10");
 		}
 	}
 	
